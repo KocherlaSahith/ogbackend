@@ -49,7 +49,7 @@ def get_posts():
 @app.route("/api/posts", methods=['POST'])
 def create_post():
     data = request.get_json()
-    post_id = db.create_post(
+    post_id = db.database.create_post(
         data['title'],
         data['content'],
         data['author_id']
